@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <div class="top_bar">
+        <dev class="menu"><a class="logo" href="#"><img class="logo" src="{% static 'main/img/logo.png' %}"></img></a></dev>
+
+        <dev class="menu">
+        <ul class="top_bar_menu">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'about' %}">О Нас</a></li>
+            <li><a href="{% url 'abiturients' %}">Поступающим</a></li>
+            <li><a href="{% url 'vacation'%}">Вакансии</a></li>
+        </ul>
+        </dev>
+    </div>
+
+{% block content%}
+{%endblock%}
+
+
+</body>
+</html>

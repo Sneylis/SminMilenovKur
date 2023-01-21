@@ -1,0 +1,90 @@
+/*-------------------------------------------top_bar--------------------------------------------------*/
+.top_bar{
+	width: 100%;
+	border-bottom: 10px solid;
+	color:
+
+
+}
+
+.menu {
+display: inline-block;
+
+
+}
+.logo {
+ width:120px;
+ height:120px;
+}
+
+
+.top_bar_menu > li,a{
+    text-decoration: none;
+    list-style-type: none;
+    display: inline-block;
+    color: black;
+    padding-left: 30px;
+    font-family: Arial;
+}
+
+.top_bar_menu > li,a:hover{
+    color: red;
+}
+
+/*-------------------------------------------top_bar--------------------------------------------------*/
+
+/*-------------------------------------------library_books--------------------------------------------------*/
+.book {
+    width:600px;
+    height:300px;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;s
+    color:red;
+}
+
+.book_tag {
+    width:30%;
+    padding-left: 30px;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    color:red;
+}
+
+.book_cont{
+    padding-left: 30px;
+    text-align:center;
+    display: flex;
+}
+
+.img_about {
+    text-align:center;
+ 
+}
+
+.news_tag{
+    text-align: center;
+}
+
+.text_about{
+    text-align: center;
+}
+
+.news_list{
+    width: 600px;
+    background-color: gray;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news_img{
+    width: 600px;
+    height: 500px;
+    box-sizing: border-box;
+}
+
+.news_list > h1{
+    color:red;
+}

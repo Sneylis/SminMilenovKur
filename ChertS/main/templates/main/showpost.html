@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+{%load static%}
+{% block title %}Main menu{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+    {%for new in news%}
+        <div class="news_list">
+            <h1>{{new.title}}</h1>
+            <p>{{new.Text}}</p>
+            {% if new.news_photo%}
+            <div class="news_img"><img src="{{new.news_photo.url}}"></div>
+            {%endif%}
+        </div>
+    {%endfor%}
+
+
+{% endblock %}

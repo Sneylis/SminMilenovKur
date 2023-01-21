@@ -1,0 +1,26 @@
+{% extends 'main/layout.html' %}
+{%load static%}
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+<h1 class="news_tag">Новости нашего ёбаного болота (((</h1>
+
+
+    {% for new in news%}
+        <div class="news_list">
+
+            {%if new.news_photo%}
+                <div class="news_img"><img src="{{new.news_photo.url}}"></div>
+            {%endif%}
+
+            <h1>{{new.title}}</h1>
+            <b><label>{{new.time_create}}</label></b>
+            <p>{{new.Text|truncatewords:30}}</p>
+            <a href="{{ new.get_absolute_url }}">читать новость</a>
+        </div>
+
+        <br>
+
+    {%endfor%}
+
+{% endblock %}

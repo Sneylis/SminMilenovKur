@@ -1,0 +1,44 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Библиотека{% endblock %}
+
+{% block content %}
+    <div class="book_tag">
+        <h1>Библиотка</h1>
+        <ul>
+            {% if cat_selected == 0 %}
+                <li class="cat_select">Все категории</li>
+            {%else%}
+                <li><a href="{% url 'library' %}">Все категории</a></li>
+            {%endif%}
+
+            {% for c in cat%}
+                {%if c.pk == cat_selected %}
+                    <li class="cat_selected">{{c.name}}</li>
+                {%else%}
+                    <li><a href="{{ c.get_absolute_url}}">{{c.name}}</a></li>
+                {%endif%}
+            {%endfor%}
+
+        </ul>
+    </div>
+
+<div class="book_cont">
+{% if books%}
+    <ul>
+    {%for book in books%}
+        <div>
+            {% if book.photo %}
+                <div><img src="{{book.photo.url}}"></div>
+            {%endif%}
+            <li>{{book.title}}</li>
+            <li>{{book.author}}</li>
+            <li>{{book.preview}}</li>
+        </div>
+    {%endfor%}
+    </ul>
+{%else%}
+    <p>Здесь пока ничего нет</p>
+{%endif%}
+</div>
+{% endblock %}
