@@ -1,8 +1,8 @@
 # SminMilenovKur
 курсовая для технаря
 
-Front /David
-Back /Simon
+Front-David
+Back-Simon
 
 THis site has been 
   -Chat
