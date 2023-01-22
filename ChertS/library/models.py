@@ -10,10 +10,13 @@ class Books (models.Model):
     preview = models.TextField('О книге',max_length=500)
     photo = models.ImageField(upload_to='photos/%y/%m/%d/')
     cat = models.ForeignKey('Category', on_delete=models.PROTECT,null=True)
+    file = models.FileField(upload_to='books/%y/%m/%d/',null=True)
 
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse ('sbook', kwargs={'sbook_id':self.pk})
 
     class Meta:
         verbose_name = 'Книга'

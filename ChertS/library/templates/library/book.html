@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+{%load static%}
+{% block title %}Main menu{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+    {%for book in books%}
+        <div>
+            {% if book.photo%}
+                <div><img src="{{book.photo.url}}"></div>
+            {%endif%}
+            <ul>
+                <li><h1>{{book.title}}</h1></li>
+                <li><p>{{book.author}}</p></li>
+                <li><p>{{book.preview}}</p></li>
+            </ul>
+
+            <a href="{{book.file.url}}">Читать оналйн</a>
+        </div>
+    {%endfor%}
+
+
+{% endblock %}

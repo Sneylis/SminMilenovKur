@@ -17,3 +17,10 @@ def show_category (request,cat_id):
 
 
     return render(request, 'library/library_home.html',{'cat':cat,'cat_selected':cat_id,'books':books})
+
+def show_book(request, sbook_id):
+    books = Books.objects.filter(pk=sbook_id)
+
+    return render(request, 'library/book.html', {'books':books})
+
+
