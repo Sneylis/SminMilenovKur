@@ -1,7 +1,7 @@
 # SminMilenovKur
 курсовая для технаря
 
-Front-David
+Front-David////
 Back-Simon
 
 THis site has been 
