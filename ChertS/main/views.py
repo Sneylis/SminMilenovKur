@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.views.generic import CreateView
+
+from .forms import AddNewsForm
 from .models import News
 # Create your views here.
 
@@ -21,3 +24,13 @@ def vacation(request):
 def showpost (request, post_id):
     news = News.objects.filter(pk=post_id)
     return render(request, 'main/showpost.html', {'news':news})
+
+def addNews (request):
+    if request.method == 'POST':
+        form = AddNewsForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = AddNewsForm()
+    return render(request, 'main/addNews.html', {'form':form})
