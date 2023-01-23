@@ -1,5 +1,5 @@
 # SminMilenovKur
-курсовая для технаря
+The college exam
 
 Front-David////
 Back-Simon
