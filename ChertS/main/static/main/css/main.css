@@ -1,8 +1,9 @@
 /*-------------------------------------------top_bar--------------------------------------------------*/
 .top_bar{
 	width: 100%;
-	border-bottom: 10px solid;
+	border-bottom: 2px solid;
 	color:
+    background-color:gray;
 
 
 }
