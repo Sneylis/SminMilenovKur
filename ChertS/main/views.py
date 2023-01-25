@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.generic import CreateView
@@ -8,9 +9,11 @@ from .models import News
 
 def index(request):
     news = News.objects.all()
+    paginator = Paginator(news, 1)
+    page_num = request.GET.get('page')
+    page_obj = paginator.get_page(page_num)
     news = reversed(news)
-
-    return render(request, 'main/index.html', {'news':news} )
+    return render(request, 'main/index.html', {'page_obj':page_obj,'news':news} )
 
 def about(request):
     return render(request, 'main/about.html')
