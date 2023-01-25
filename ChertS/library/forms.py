@@ -5,7 +5,7 @@ class AddBookForm (forms.ModelForm):
 
     class Meta:
         model = Books
-        fields = ['title', 'author', 'preview', 'photo', 'file']
+        fields = ['title', 'author', 'preview', 'photo', 'file', 'cat']
         widjets = {
             'title': forms.TextInput(attrs={'class':'form-input'}),
             'author': forms.TextInput(attrs={'class':'form-input'}),

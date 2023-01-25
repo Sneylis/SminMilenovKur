@@ -29,9 +29,9 @@
     </div>
 
 <div class="book_cont">
-{% if books%}
+{% if page_obj %}
     <ul>
-    {%for book in books%}
+    {%for book in page_obj %}
         <div>
             {% if book.photo %}
                 <div><img src="{{book.photo.url}}"></div>
@@ -39,14 +39,49 @@
             <li>{{book.title}}</li>
             <li>{{book.author}}</li>
             <li>{{book.preview}}</li>
+            <li>{{book.cat}}</li>
 
 
             <p><a href="{{book.get_absolute_url}}">смотьеть книгу</a></p>
         </div>
     {%endfor%}
     </ul>
+
+    {% elif books %}
+    <ul>
+    {%for book in books %}
+        <div>
+            {% if book.photo %}
+                <div><img src="{{book.photo.url}}"></div>
+            {%endif%}
+            <li>{{book.title}}</li>
+            <li>{{book.author}}</li>
+            <li>{{book.preview}}</li>
+            <li>{{book.cat}}</li>
+
+
+            <p><a href="{{book.get_absolute_url}}">смотьеть книгу</a></p>
+        </div>
+    {%endfor%}
+    </ul>
+
+
 {%else%}
     <p>Здесь пока ничего нет</p>
+
+
 {%endif%}
 </div>
+
+<footer>
+    <nav class="paginator">
+        <ul class="paginator">
+            {%for p in page_obj.paginator.page_range%}
+            <li>
+                <a href="?page={{p}}">{{p}}</a>
+            </li>
+            {%endfor%}
+        </ul>
+    </nav>>
+</footer>>
 {% endblock %}

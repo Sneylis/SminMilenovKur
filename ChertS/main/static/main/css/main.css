@@ -1,5 +1,6 @@
 body {
     background:#303030;
+    color:white;
 }
 /*-------------------------------------------top_bar--------------------------------------------------*/
 .top_bar{
@@ -128,4 +129,32 @@ display: inline-block;
 
 .news_list > h1{
     color:red;
+}
+
+
+.paginator{
+    display:inline-block;
+    list-style-decoration:none;
+}
+
+aside{
+    width: 200px;
+    color:white;
+    background-color: darkgray;
+    border-right: 10px solid black;
+    display: inline-block;
+}
+
+aside > ul > li{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.content_body{
+display: inline-block;
+}
+
+.dss{
+    display: inline-block;
+    width: 100%;
 }

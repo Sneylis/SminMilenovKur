@@ -5,12 +5,11 @@
 {% block content %}
 <h1 class="news_tag">Новости нашего учебного заведения</h1>
 
-
-    {% for new in news%}
+    {% for new in page_obj%}
         <div class="news_list">
 
             {%if new.news_photo%}
-                <!-- <div class="news_img"><img src="{{new.news_photo.url}}"></div>  РАСКОМЕНЬТИТЬ--> 
+                <div class="news_img"><img src="{{new.news_photo.url}}"></div>
             {%endif%}
         <div>
             <h1 class="title_news">{{new.title}}</h1>
@@ -25,8 +24,8 @@
     {%endfor%}
 
 <footer>
-    <nav>
-        <ul>
+    <nav class="paginator">
+        <ul class="paginator">
             {%for p in page_obj.paginator.page_range%}
             <li>
                 <a href="?page={{p}}">{{p}}</a>

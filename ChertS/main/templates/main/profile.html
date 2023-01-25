@@ -1,0 +1,11 @@
+{% extends 'main/layout.html' %}
+{%load static%}
+
+
+{%block content%}
+{%for u in user%}
+<div>
+    <h1>{{u.username}}</h1>
+
+</div>
+{%endblock%}

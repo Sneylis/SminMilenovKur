@@ -19,14 +19,37 @@
             <li><a href="{% url 'vacation'%}">Вакансии</a></li>
             <li><a href="{% url 'addNews'%}">Добавить новость</a></li>
 
+            {% if user.is_authenticated%}
 
+            {%else%}
+            <li><a href="{%url 'register'%}">Регистрация</a></li>
+            <li><a href="{%url 'login'%}">Войти</a></li>
+            {%endif%}
         </ul>
+
+
         </dev>
     </div>
 
+    <div class="dss">
+        {% if request.user.is_authenticated %}
+            <aside>
+            <ul>
+                <li><a href="{%url 'profile'%}">Моя страница</a></li>
+                <li><a href="#">Чат</a></li>
+                <li><a href="#">лекции/тесты</a></li>
+                <li><a>Оценки</a></li>
+                <li><a  href="{%url 'library'%}">Библиотека</a></li>
+            </ul>
+            </aside>
+        {%endif%}
+
+    <div class="content_body">
 {% block content%}
 {%endblock%}
+    </div>
 
+    </div>
 
 </body>
 </html>

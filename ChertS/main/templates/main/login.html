@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+{%load static%}
+
+
+{%block content%}
+<h1>Регистрация</h1>
+<form method="post">
+    {%csrf_token%}
+
+    {%for f in form %}
+    <p><label class="form_label" for="{{f.id_for_label}}">{{f.label}}: </label>{{f}}</p>
+    <div class="div_for_error">{{f.errors}}</div>
+
+    {%endfor%}
+
+    <button type="submit">войти</button>
+
+</form>
+{%endblock%}
