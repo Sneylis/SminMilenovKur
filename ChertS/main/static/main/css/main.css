@@ -110,6 +110,18 @@ display: inline-block;
 .text_about{
     text-align: center;
 }
+.text_about h1{
+    color:#e83600;
+    font-family:Georgia;
+}
+.text_about p{
+    color:white;
+}
+.img_about img{
+    border-bottom:2px solid #171717;
+    border-right:2px solid #171717;
+    border-radius: 5px;    
+}
 
 .news_list{
     width: 600px;
@@ -128,4 +140,20 @@ display: inline-block;
 
 .news_list > h1{
     color:red;
+}
+.postup{
+    text-align: center;
+    color:white;
+}
+.postup_opis{ 
+    font-size: 25px;
+}
+.postup ul{
+    list-style-type:none;
+}
+.confirm_forma {
+    border:1px solid #303030;
+    background:#171717;
+    padding:5px;
+    border-radius: 5px;
 }
