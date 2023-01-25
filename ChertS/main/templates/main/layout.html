@@ -7,17 +7,17 @@
     <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 </head>
-<body>
+<body class="bodyfor">
     <div class="top_bar">
         <dev class="menu"><a class="logo" href="{% url 'home' %}"><img class="logo" src="{% static 'main/img/logo.png' %}"></img></a></dev>
 
         <dev class="menu">
         <ul class="top_bar_menu">
             <li><a href="{% url 'home' %}">Главная</a></li>
-            <li><a href="{% url 'about' %}">О Нас</a></li>
+            <li><a href="{% url 'about' %}">О нас</a></li>
             <li><a href="{% url 'abiturients' %}">Поступающим</a></li>
             <li><a href="{% url 'vacation'%}">Вакансии</a></li>
-            <li><a href="{% url 'addNews'%}">добавить новость</a></li>
+            <li><a href="{% url 'addNews'%}">Добавить новость</a></li>
 
 
         </ul>

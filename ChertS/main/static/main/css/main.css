@@ -1,11 +1,11 @@
+body {
+    background:#303030;
+}
 /*-------------------------------------------top_bar--------------------------------------------------*/
 .top_bar{
 	width: 100%;
-	border-bottom: 2px solid;
-	color:
-    background-color:gray;
-
-
+	border-bottom: 2px solid #171717;
+    background:#262626;
 }
 
 .menu {
@@ -23,16 +23,51 @@ display: inline-block;
     text-decoration: none;
     list-style-type: none;
     display: inline-block;
-    color: black;
-    padding-left: 30px;
+    color:white;
     font-family: Arial;
 }
 
 .top_bar_menu > li,a:hover{
-    color: red;
+    color: #e83600;
+}
+.top_bar_menu li {
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-right: 2px solid #171717;
+    border-bottom:2px solid #171717; 
+    border-radius:5px;
+
 }
 
 /*-------------------------------------------top_bar--------------------------------------------------*/
+
+/*------------------------------------------body-content-news-----------------------------------------*/
+
+
+.title_news{
+    margin-left: 10px;
+    color:#e83600;
+}
+.read_the_news{
+    margin-left: 450px;
+    color:White;
+}
+.read_the_news a:hover{
+    color:#e83600;
+}
+.time_published{
+    margin-left:10px;
+    color:white;
+    font-size: 10px;
+}
+.text_for_news{
+    color:white;
+    margin-left:10px;
+}
+
+/*------------------------------------------body-content-news-----------------------------------------*/
 
 /*-------------------------------------------library_books--------------------------------------------------*/
 .book {
@@ -66,7 +101,10 @@ display: inline-block;
 }
 
 .news_tag{
+    margin-top:5px;
     text-align: center;
+    color:white;
+    font-family:Georgia;
 }
 
 .text_about{
@@ -75,9 +113,11 @@ display: inline-block;
 
 .news_list{
     width: 600px;
-    background-color: gray;
+    background-color: #404040;
     margin-left: auto;
     margin-right: auto;
+    border-bottom: 2px solid #171717;
+    border-radius: 5px;
 }
 
 .news_img{
