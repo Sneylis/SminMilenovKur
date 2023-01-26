@@ -183,11 +183,32 @@ aside ul{
     padding:0;
 }
 aside{
-    margin-top: 200px;
     padding: 30px;
     position: absolute;
     background: #262626;
     border-bottom: 2px solid #171717;
     border-right: 2px solid #171717;
     border-radius: 0px 5px 5px 0px;
+    height:280vh;
+}
+/*-------------------------------------------Aside--------------------------------------------------*/
+/*-------------------------------------------Pagination--------------------------------------------------*/
+.paginator ul{
+    list-style-type: none;
+    display: flex;
+    margin-left:45%;
+}
+.paginator li {
+    font-size: 25px;
+    padding: 1px 5px 1px 5px;
+    margin:5px;
+    border: 1px solid #171717;
+    border-radius: 5px;
+    background:#262626;
+}
+.paginator li:hover{
+    background:#e83600;
+}
+.paginator a:hover{
+    color:white;
 }
