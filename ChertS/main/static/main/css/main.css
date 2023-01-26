@@ -157,3 +157,37 @@ display: inline-block;
     padding:5px;
     border-radius: 5px;
 }
+/*-------------------------------------------library_books--------------------------------------------------*/
+/*-------------------------------------------Register-login--------------------------------------------------*/
+.h1register{
+    color:#e83600; 
+}
+form{
+    color:white;
+}
+/*-------------------------------------------Register-login--------------------------------------------------*/
+
+/*-------------------------------------------Aside--------------------------------------------------*/
+aside li{
+    padding:3px;
+    list-style-type: none;
+    color:white;
+    text-align:center;
+    border-bottom: 2px solid #171717;
+    border-right: 2px solid #171717;
+    border-radius: 5px;
+
+}
+aside ul{
+    margin:0;
+    padding:0;
+}
+aside{
+    margin-top: 200px;
+    padding: 30px;
+    position: absolute;
+    background: #262626;
+    border-bottom: 2px solid #171717;
+    border-right: 2px solid #171717;
+    border-radius: 0px 5px 5px 0px;
+}
