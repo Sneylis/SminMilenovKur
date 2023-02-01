@@ -7,7 +7,7 @@ from .models import *
 # Create your views here.
 
 def library_home (request):
-    contact_list = Books.objects.all()
+    contact_list = Books.objects.all().order_by("-time_create")
     cat = Category.objects.all()
     paginator = Paginator(contact_list, 4)
     page_num = request.GET.get('page')

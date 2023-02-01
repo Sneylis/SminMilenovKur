@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{%load static%}
+{% block title %}Подача документов{% endblock %}
+
+{% block content %}
+
+<form action="{% url 'addDoc' %}" method="post" enctype="multipart/form-data">                 <!--тут нужен дизайн дива, работает тк форма наследуеться, для дизайна полей я сделал тебе Form_label-->
+    {% csrf_token %}
+
+    <div class="div_for_error">{{form.non_field_errors}}</div>
+
+    {% for f in form%}
+        <p><label class="form_label" for="{{f.id_for_label}}">{{f.label}}: </label>{{f}}</p>
+        <div class="div_for_error">{{f.errors}}</div>
+    {%endfor%}
+
+    <button type="submit">Отправить</button>
+
+</form>
+
+{% endblock %}

@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView
@@ -36,6 +37,8 @@ def showpost (request, post_id):
     news = News.objects.filter(pk=post_id)
     return render(request, 'main/showpost.html', {'news':news})
 
+
+@login_required
 def addNews (request):
     if request.method == 'POST':
         form = AddNewsForm(request.POST, request.FILES)
@@ -66,9 +69,6 @@ class login(DataMixin,LoginView):
     def get_success_url(self):
         return reverse_lazy('home')
 
-
+@login_required()
 def profile(request):
-    session = request.session['my_car']
-    user = User.objects.filter(session=session)
-
-    return render(request,'main/profile.html',{'user':user})
+    return render(request,'main/profile.html',{'request':request})

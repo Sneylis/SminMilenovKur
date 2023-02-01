@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+{%load static%}
+{% block title %}Main menu{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+    {%for book in books%}
+        <div class="book_cont">
+            {% if book.photo%}
+                <div><img src="{{book.photo.url}}"></div>
+            {%endif%}
+            <ul>
+                <li><h1>{{book.title}}</h1></li>
+                <li><p>{{book.about}}</p></li>
+            </ul>
+
+            <a href="{%url 'addDoc'%}">откликнуться</a>
+
+        </div>
+    {%endfor%}
+
+
+{% endblock %}

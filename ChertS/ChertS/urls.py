@@ -26,7 +26,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('library/', include('library.urls')),
-    #path('chat/', webio_view_func),#
+    # path('chat/', include('chat.urls')),
+    # path('Exams/', include('exams.urls')),
+    path('Vacations/',include('vacations.urls'))
 ] + static(settings.STATIC_URL, document_roots=settings.STATIC_ROOT)
 
 if settings.DEBUG:

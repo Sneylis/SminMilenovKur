@@ -32,13 +32,13 @@
 {% if page_obj %}
     <ul>
     {%for book in page_obj %}
-        <div>
+        <div class="book_cart">
             {% if book.photo %}
                 <div><img src="{{book.photo.url}}"></div>
             {%endif%}
             <li>{{book.title}}</li>
             <li>{{book.author}}</li>
-            <li>{{book.preview}}</li>
+            <li>{{book.preview|truncatewords:30}}</li>
             <li>{{book.cat}}</li>
 
 

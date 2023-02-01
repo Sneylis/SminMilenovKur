@@ -3,9 +3,11 @@
 
 
 {%block content%}
-{%for u in user%}
-<div>
-    <h1>{{u.username}}</h1>
+
+<div class="news_list">
+    <h1>{{request.user.username}}</h1>
+
+    <a href="{%url 'exit' %}">log out</a>
 
 </div>
 {%endblock%}
