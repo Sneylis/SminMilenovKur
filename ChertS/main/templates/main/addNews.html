@@ -3,8 +3,8 @@
 {% block title %}Main menu{% endblock %}
 
 {% block content %}
-
-<form action="{% url 'addNews' %}" method="post" enctype="multipart/form-data">                 <!--тут нужен дизайн дива, работает тк форма наследуеться, для дизайна полей я сделал тебе Form_label-->
+<div class="add">
+<form class='add' action="{% url 'addNews' %}" method="post" enctype="multipart/form-data">                 <!--тут нужен дизайн дива, работает тк форма наследуеться, для дизайна полей я сделал тебе Form_label-->
     {% csrf_token %}
 
     <div class="div_for_error">{{form.non_field_errors}}</div>
@@ -17,5 +17,5 @@
     <button type="submit">Добавить</button>
 
 </form>
-
+</div>
 {% endblock %}

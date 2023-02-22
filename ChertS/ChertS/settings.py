@@ -44,8 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'vacations',
     'ChertS',
-
-
+    'chat',
 ]
 
 MIDDLEWARE = [
@@ -79,6 +78,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'ChertS.wsgi.application'
 ASGI_APPLICATION = 'ChertS.asgi.application'
 
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 
 
 # Database

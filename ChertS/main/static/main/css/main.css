@@ -94,6 +94,7 @@ display: inline-block;
     margin-right:auto;
     display: flex;
     color:red;
+    display: inline-block;
 }
 
 .book_cont{
@@ -213,3 +214,12 @@ aside{
         background: #9c88ff;
         color: #fff;
     }
+
+.add{
+    padding-left:200px;
+    padding-top:100px;
+}
+
+.books_type_list {
+    display: inline-block;
+}
